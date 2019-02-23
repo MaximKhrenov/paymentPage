@@ -5,6 +5,14 @@ import './../sass/styles.scss';
 
 window.$ = $;
 
+  $(function() {
+        $('#show_menu').on('click', 'li:not(.menu__active)', function() {
+            $(this).addClass('menu__active').siblings().removeClass('menu__active');
+            $(this).append('<span class="active"> (активная)</span>');
+            $('li:not(.menu__active) span').remove();
+        });
+ });
+
 $('#menu').on('click', function () {
     $('#show_menu').toggle();
 });
