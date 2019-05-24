@@ -1,5 +1,22 @@
-<!doctype HTML>
-<html>
+<!doctype HTML><a href="https://aframe.io/blog/arjs/">Check out Mozilla's blog on this</a>
+
+<br>
+<br>
+
+<!-- include A-Frame obviously, in the head-->
+
+<!-- include ar.js for A-Frame -->
+<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs>
+    <!-- create your content here. just a box for now -->
+    <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+    <!-- define a camera which will move according to the marker position -->
+    <a-marker-camera preset='hiro'></a-marker-camera>
+  </a-scene>
+</body>
+
+
 <head>
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 </head>
